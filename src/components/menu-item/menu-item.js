@@ -1,8 +1,11 @@
 import React from 'react';
 import './menu-item.scss'
+import { Link } from "react-router-dom";
 
-const MenuItem = ({ title, imageUrl, size }) => (
-  <div
+
+const MenuItem = ({ title, imageUrl, size, linkUrl }) => (
+  <Link
+    to={linkUrl}
     className={`menu-item ${size}`}
   >
     <div
@@ -15,7 +18,7 @@ const MenuItem = ({ title, imageUrl, size }) => (
       <h1 className='title'>{ title.toUpperCase() }</h1>
       <span className='subtitle'>SHOP NOW</span>
     </div>
-  </div>
+  </Link>
 )
  
 export default MenuItem;
